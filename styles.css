@@ -87,7 +87,7 @@ h2 {
   font-family: var(--mainff);
 }
 .nav-center {
-  width: 85vw;
+  width: 90vw;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
@@ -96,7 +96,7 @@ h2 {
   padding: 5rem 0;
 }
 .section-center {
-  width: 85vw;
+  width: 90vw;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -302,21 +302,21 @@ main stake
   .main-img {
     transform: translateY(-5%);
     z-index: 1;
-    width: 650px;
+    width: 630px;
     display: grid;
     justify-self: end;
     position: absolute;
     top: 1rem;
-    right: -2rem;
+    right: 0;
   }
-    .desk-side-bg {
-      background: radial-gradient(34.62% 63.65% at 100% 47.5%, #ED1E79 0%, rgba(237, 30, 121, 0) 100%);
-      width: 800px;
-      height: 600px;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+      .desk-side-bg {
+        background: radial-gradient(34.62% 63.65% at 100% 47.5%, #ED1E79 0%, rgba(237, 30, 121, 0) 100%);
+        width: 1000px;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
   .radial-bg {
     display: none;
   }
@@ -477,6 +477,7 @@ wallet
   }
   .staked-index {
     justify-self: end;
+    column-gap: 1.5rem;
     align-items: end;
   }
     .wthd-req {
@@ -494,28 +495,406 @@ wallet
 intro
 =============
 */
+.staking-main {
+  display: grid;
+}
+.staking-img {
+  margin-bottom: 3rem;
+  width: 324px;
+  height: 324px;
+  justify-self: center;
+}
+.staking-desc h2 {
+  margin-bottom: 1rem;
+  font-size: 44px;
 
+}
+.staking-desc span {
+  font-weight: 700;
+}
+
+.staking-desc p {
+  margin-bottom: 2rem;
+  color: lightgrey;
+  /* line-height: 24px; */
+  line-height: 1.5rem;
+}
+.extra-desc {
+  font-size: 24px;
+  margin-bottom: 2rem;
+  line-height: 36px;
+}
+.extra-desc span {
+  color: var(--yellow-color);
+}
+
+@media screen and (min-width:992px) {
+.staking-main {
+  grid-template-columns: 1fr 1fr;
+  height: 630px;
+  }
+  .staking-img {
+    width: 500px;
+  }
+  .staking-desc {
+    align-self: center;
+    max-width: 590px;
+  }
+  .staking-desc p{
+    font-size: 24px;
+    line-height: 30px;
+  }
+.extra-desc {
+  font-size: 2rem;
+  line-height: 48px;
+  max-width: 905px;
+  }
+}
 /* 
 =============
 two buttons
 =============
 */
+.action-section {
+  background-color: var(--yellow-color);
+  padding: 2.5rem;
+  border-radius: 24px;
+  position: relative;
+}
+.action-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.action-head h2 {
+    color: var(--black-color);
+    font-weight: 600;
+}
+.black-btn {
+  background-color: var(--black-color);
+  color: var(--main-white);
+  border-color: transparent;
+}
+.act-btn {
+  border-color: var(--black-color);
+  color: var(--black-color);
+}
+.btn-section {
+  display: grid;
+  row-gap: 1rem;
+}
+@media screen and (min-width:992px) {
+  .btn-section {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+  .black-btn {
+    width: 213px;
+    justify-self: end;
+  }
+  .act-btn {
+    width: 213px;
+  }
+}
+
+
+/* FADE STYLE */
+.fade-line {
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background: linear-gradient(180deg, #FBB03B 0%, rgba(251, 176, 59, 0) 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
 
 /* 
 =============
 working
 =============
-
 */
-
+.working {
+  display: grid;
+}
+.circle-img {
+  width: 337px;
+  height: 337px;
+  justify-self: center;
+  margin-bottom: 3rem;
+}
+.working-head h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.3rem;
+}
+.working-para p {
+  color: lightgrey;
+  line-height: 1.5rem;
+}
+.working-para span {
+  color: var(--main-white);
+  font-weight: 600;
+}
+.extra-working p{
+  font-size: 1.5rem;
+  line-height: 36px;
+  margin: 2rem 0;
+}
+.extra-working span {
+  color: var(--yellow-color);
+}
+.working-btns {
+  display: grid;
+  row-gap: 1rem;
+}
+.w-btn-1 {
+  background-color: var(--red-color);
+  border-color: transparent;
+}
+@media screen and (min-width:992px) {
+  .working {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+    grid-template-areas: 
+    "a b"
+    "c c"
+    ;
+  }
+  .circle-img {
+    grid-area: b;
+    justify-self: end;
+    width: 518px;
+    height: 560px;
+  }
+  .working-para p{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .working-para-2 {
+    margin-top: 1rem;
+  }
+  .working-desc {
+    grid-area: a;
+    align-self: center;
+  }
+  .working-head h2{
+    font-size: 64px;
+  }
+.extra-working {
+  max-width: 985px;
+  grid-area: c;
+  justify-self: end;
+  margin-bottom: 2rem;
+}
+  .extra-working p{
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
+  .working-btns {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+  .working-btn {
+    width: 309px;
+  }
+  .w-btn-1 {
+    justify-self: end;
+  }
+  .w-btn-2 {
+    justify-self: start;
+  }
+}
 /* 
 =============
 staking pools
 =============
 */
+.pool-desc h2{
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+}
+.staking-paras p{
+  font-size: 16px;
+  line-height: 24px;
+  color: lightgrey;
+}
+.staking-paras {
+  margin-bottom: 2rem;
+}
+.staking-paras span {
+  font-weight: 700;
+  color: var(--main-white);
+}
+.staking-paras .yellow-clr {
+  color: var(--yellow-color);
+}
+.extra-staking p{
+  margin-top: 1rem;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--main-white);
+}
+.pool-btns {
+  display: grid;
+  row-gap: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+.single-pool {
+  background-color: var(--black-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+.single-pool h3 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+.pool-stats h4 {
+  color: lightgray;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.pool-stats h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.pool-stats span{
+  font-size: 14px;
+  font-weight: 500;
+  color: lightgray;
+}
+.pool-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "a b"
+  "c c"
+  ;
+}
+.stat-2 {
+  justify-self: end;
+}
+.stat-3 span {
+  color: var(--yellow-color);
+  font-size: 1.5rem;
+}
+.line {
+  background-color: #d3d3d3;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+.pools-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-top: 1.5rem;
+}
+.btn-1 {
+  justify-self: end;
+}
+.pool-opt {
+  width: 150px;
+}
+.link-para {
+  color: blue;
+}
+.pools-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+@media screen and (min-width:992px) {
+  .pool-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+  .pool-desc h2{
+    font-size: 64px;
+  }
+  .pool-btns {
+    grid-template-columns: 1fr 1fr;
+    align-self: flex-end;
+    column-gap: 1rem;
+  }
+  .staking-paras p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .extra-staking p {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .pool-btns {
+    width: 540px;
+    justify-self: end;
+  }
+  .pool-btn {
+    width: 260px;
+  }
+}
 
+.pool-section {
+  position: relative;
+}
+.radial-pool-bg {
+  background: radial-gradient(84.11% 26.45% at 52.4% 0%, rgba(237, 30, 121, 0.65) 0%, rgba(237, 30, 121, 0.4) 41.49%, rgba(237, 30, 121, 0) 100%),
+    #040404;
+    width: 100%;
+    height: 3539px;
+    /* postion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+@media screen and (min-width:992px) {
+  .radial-pool-bg {
+    height: 1289px;
+  }
+}
 /* 
 =============
 footer
 =============
 */
+
+.footer-section {
+  display: grid;
+  place-items: center;
+}
+.foot-brand {
+  width: 200px;
+}
+.foot-img {
+  margin-bottom: 1.5rem;
+}
+.foot-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.foot-icons a{
+  font-size: 1.35rem;
+  color: var(--yellow-color);
+  margin-bottom: 1.5rem;
+  justify-self: center;
+  transition: var(--transition);
+}
+.foot-icons a:hover {
+  color: var(--red-color);
+  transform: translateY(-0.25rem);
+}
+.rights p {
+  color: #d3d3d3;
+  text-transform: capitalize;
+  
+}
+@media screen and (min-width:992px) {
+  .black-bg {
+    background-color: var(--black-color)  ;
+  }
+}
