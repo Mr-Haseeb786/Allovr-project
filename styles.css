@@ -650,6 +650,9 @@ working
   background-color: var(--red-color);
   border-color: transparent;
 }
+.w-btn-1-tech {
+  font-size: 14px;
+}
 @media screen and (min-width:992px) {
   .working {
     grid-template-columns: 1fr 1fr;
